@@ -1,4 +1,4 @@
-use std::thread
+use std::thread;
 
 use bambangshop::{Result, compose_error_response};
 use rocket::http::Status;
@@ -39,7 +39,7 @@ impl NotificationService {
             status: String::from(status)
         };
 
-        let subscribers: Vex<Subscriber> = SubscriberRepository::list_all(product_type);
+        let subscribers: Vec<Subscriber> = SubscriberRepository::list_all(product_type);
         for subscriber in subscribers {
             payload.subscriber_name = subscriber.clone().name;
             let subscriber_clone = subscriber.clone();
