@@ -77,6 +77,9 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Pada kasus BambangShop, kita membutuhkan interface atau trait pada Rust untuk mengimplementasikan kelas Subscriber dalam Observer design patern supaya meningkatkan maintainability kode.
+2. Penggunaan Vec (list) memungkinkan, namun lebih efektif menggunakan DashMap karena id terjamin unik sehingga akses ke id dicari kompleksitasnya O(1), sedangkan dengan Vec harus iterasi ke semua id yang kompleksitasnya O(N).
+3. Lebih baik menggunakan DashMap untuk *manage list of subscribers* dalam *thread-safe* pada Rust karena mampu mengatasi concurrency dengan baik sehingga kita tidak perlu menambahkam sinkronisasi tambahan.
 
 #### Reflection Publisher-2
 
