@@ -87,3 +87,6 @@ This is the place for you to write reflections:
 3. Sudah. Menurut saya, Postman membantu untuk send request HTTP ke API dan menganalisis responsnya. Postman dapat membantu kita untuk melihat-lihat response suatu endpoint dengan format berbeda-beda. Selain itu, kita juga dapat set environment untuk berkolaborasi dengan orang lain terkait API.
 
 #### Reflection Publisher-3
+1. Tutorial ini menggunakan Push model. Pada notify function, publisher mng-iterasi ke seluruh list of subscribers yang didapat dari SubscriberRepository secara aktif memanggil method update.
+2. Implementasi Pull model akan menguntungkan dalam mengatasi overhead karena subscriber hanya akan request update ketika dibutuhkan, namun pengiriman notification menjadi tidak real-time.
+3. Tanpa multi-threading, program akan menjadi tidak efisien karena pengiriman notification harus menunggu yang lain.
