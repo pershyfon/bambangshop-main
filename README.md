@@ -82,5 +82,8 @@ This is the place for you to write reflections:
 3. Lebih baik menggunakan DashMap untuk *manage list of subscribers* dalam *thread-safe* pada Rust karena mampu mengatasi concurrency dengan baik sehingga kita tidak perlu menambahkam sinkronisasi tambahan.
 
 #### Reflection Publisher-2
+1. Memisahkan Service dan Repository dari Model bertujuan untuk mengimplementasikan SRP (Single Responsibility Principle) karena task/keperluan masing-masing berbeda. Mengatur business logic-nya juga akan lebih mudah. Selain itu, pemisahan task berbeda tersebut akan meningkatkan maintainability, scalability, dan testability.
+2. Jika hanya menggunakan Model, kode akan menjadi sangat kompleks karena banyak task/responsible yang harus dikerjakan pada satu Model. Kode akan menjadi sulit untuk di-maintain atau di-extend, disebut juga sebagai *bloated*.
+3. Sudah. Menurut saya, Postman membantu untuk send request HTTP ke API dan menganalisis responsnya. Postman dapat membantu kita untuk melihat-lihat response suatu endpoint dengan format berbeda-beda. Selain itu, kita juga dapat set environment untuk berkolaborasi dengan orang lain terkait API.
 
 #### Reflection Publisher-3
